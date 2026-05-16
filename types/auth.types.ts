@@ -16,6 +16,7 @@ export interface User {
   googleId: string | null;
   provinceId: string | null;
   sectionId: string | null;
+  expoPushToken: string | null;
 
   // Stats
   coursesCompleted: number | null;
