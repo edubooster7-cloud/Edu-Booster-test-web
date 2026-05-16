@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { useRouter } from "next/navigation";
+export const dynamic = "force-dynamic";
 
 const HomePage = () => {
   const { user, isLoading, logout } = useAuth();
