@@ -1,5 +1,6 @@
 import { AccountDeletedClient } from "@/components/auth/account-deleted-client";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Restauration de compte | EduBooster",
@@ -9,5 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function AccountDeletedPage() {
-  return <AccountDeletedClient />;
+  return (
+    <Suspense>
+      <AccountDeletedClient />
+    </Suspense>
+  );
 }
