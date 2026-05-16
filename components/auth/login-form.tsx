@@ -112,7 +112,7 @@ export function LoginForm({
             setIsLoading(false);
             if (err instanceof ApiError) {
               if (err.payload?.errorType === "ACCOUNT_DELETED") {
-                router.push(err.payload.redirectTo);
+                router.push(err.payload.redirectTo ?? "/");
               }
               return {
                 title: "Échec de la connexion",
