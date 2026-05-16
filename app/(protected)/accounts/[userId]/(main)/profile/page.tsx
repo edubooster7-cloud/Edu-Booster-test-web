@@ -311,7 +311,7 @@ const ProfilePage = () => {
         payload.timezone = timezone.value.trim();
 
       const res = await userService.updateProfile(payload);
-      const updated = res.data.data.user as ProfileData;
+      const updated = res.data.data.user as unknown as ProfileData;
 
       if (mountedRef.current) {
         setProfile(updated);
